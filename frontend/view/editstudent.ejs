@@ -22,7 +22,7 @@
             </div>
             <div>
                 <label id="phone-label" for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
-                <input value="<%= student.phone %>" type="tel" id="phone" name="phone" class="input-field mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Enter phone number" required autocomplete="tel">
+                <input value="<%= student.phone %>" type="tel" id="phone" name="phone" required autocomplete="tel" maxlength="10" pattern="[0-9]{10} class="input-field mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Enter phone number" required autocomplete="tel">
             </div>
             <div class="flex space-x-4">
                 <button type="button" id="submit-student" class="btn flex-1 py-2 px-4 bg-indigo-600 text-white font-medium rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Update</button>

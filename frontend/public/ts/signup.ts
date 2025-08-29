@@ -17,19 +17,37 @@ document.getElementById("signup")?.addEventListener('click', function (): void {
     const passwordInput = document.getElementById("password") as HTMLInputElement;
     const confirmPasswordInput = document.getElementById("confirm-password") as HTMLInputElement;
 
-    //checking email input
-    if (!emailInput.value) emailField("red", "Enter Email");
+    let valid = true;
+
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailInput.value) {
+        emailField("red", "Enter Email");
+        valid = false;
+    } else if (!emailPattern.test(emailInput.value)) {
+        emailField("red", "Enter a valid email");
+        valid = false;
+    }
 
     //checking username input feild
-    if (!usernameInput.value) usernameField("red", "Enter username");
+    if (!usernameInput.value) {
+        usernameField("red", "Enter username");
+        valid = false;
+    }
 
     //checking confirm-password input feild
-    if (!confirmPasswordInput.value) confirmPasswordField("red", "Enter Confirm Password");
+    if (!confirmPasswordInput.value) {
+        confirmPasswordField("red", "Enter Confirm Password");
+        valid = false;
+    }
 
     //checking password input feild
-    if (!passwordInput.value) passwordField("red", "Enter Password");
+    if (!passwordInput.value) {
+        passwordField("red", "Enter Password");
+        valid = false;
+    }
 
-    if (!usernameInput || !emailInput || !passwordInput || !confirmPasswordInput) return;
+    if (!valid) return;
 
     const password: string = passwordInput.value;
     const confirmPassword: string = confirmPasswordInput.value;
