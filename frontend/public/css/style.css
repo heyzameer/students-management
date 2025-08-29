@@ -1,0 +1,106 @@
+/* body {
+    background: linear-gradient(to right, #e0e7ff, #dbeafe);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.login-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.input-field {
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #4f46e5;
+    ring: 2px;
+    ring-color: #4f46e5;
+}
+
+.btn {
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #4338ca;
+} */
+
+
+/* Improved CSS for login page */
+body {
+    background: linear-gradient(to right, #e0e7ff, #dbeafe);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.login-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.25rem;
+    border: 1.5px solid #c7d2fe;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+    background: #f8fafc;
+}
+
+.input-field:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 2px #a5b4fc;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #4338ca;
+    box-shadow: 0 4px 16px rgba(67, 56, 202, 0.12);
+}
+
+@media (max-width: 500px) {
+    .login-container {
+        padding: 1.25rem;
+        max-width: 95vw;
+    }
+    .input-field,
+    .btn {
+        font-size: 0.95rem;
+        padding: 0.6rem 0.8rem;
+    }
+}

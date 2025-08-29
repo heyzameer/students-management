@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Add New Student</h2>
+        <form id="add-student-form" class="space-y-4">
+            <div>
+                <label id="name-label" for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" name="name" class="input-field mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Enter student name" required autocomplete="name">
+            </div>
+            <div>
+                <label id="class-label" for="class" class="block text-sm font-medium text-gray-700">Class</label>
+                <input type="text" id="class" name="class" class="input-field mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Enter class (e.g., 10th Grade)" required>
+            </div>
+            <div>
+                <label id="phone-label" for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
+                <input type="tel" id="phone" name="phone" class="input-field mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Enter phone number" required autocomplete="tel">
+            </div>
+            <div class="flex space-x-4">
+                <button type="button" id="submit-student" class="btn flex-1 py-2 px-4 bg-indigo-600 text-white font-medium rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Add Student</button>
+                <a href="/home" class="btn flex-1 py-2 px-4 bg-gray-600 text-white font-medium rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 text-center">Cancel</a>
+            </div>
+        </form>
+    </div>
+    <script src="/js/add-student.js"></script>
+</body>
+</html>
